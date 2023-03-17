@@ -3,9 +3,8 @@
 ## Informações
 
 8 semanas com muito conteúdo!
-Com alunos do Brasil e portugal. A monitoria é a propria equipe de desenvolvedores da MJV.
-
-Do dia 7 de Março à 2 de Abril
+Com alunos do Brasil e Portugal. A monitoria é a própria equipe de desenvolvedores da MJV.
+Do dia 7 de março à 2 de abril
 
 ## Monitores
 

@@ -9,6 +9,4 @@ Do dia 7 de Março à 2 de Abril
 
 ## Monitores
 
-Desenvolvedor Full Stack - [Nathan Carlos](https://www.linkedin.com/in/nathan-carlos-s-a76075146/)
-Software Architect - [Alan Jhonnes](https://www.linkedin.com/in/alan-jhonnes-a9299420/)
-Analista de Educação Corporativa - [Ieda de Paula](https://www.linkedin.com/in/iedadepaula/)
+Desenvolvedor Full Stack - [Nathan Carlos](https://www.linkedin.com/in/nathan-carlos-s-a76075146/)</br>Software Architect - [Alan Jhonnes](https://www.linkedin.com/in/alan-jhonnes-a9299420/)</br>Analista de Educação Corporativa - [Ieda de Paula](https://www.linkedin.com/in/iedadepaula/)

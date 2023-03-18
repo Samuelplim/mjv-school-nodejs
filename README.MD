@@ -9,3 +9,14 @@ Do dia 7 de março à 2 de abril
 ## Monitores
 
 Desenvolvedor Full Stack - [Nathan Carlos](https://www.linkedin.com/in/nathan-carlos-s-a76075146/)</br>Software Architect - [Alan Jhonnes](https://www.linkedin.com/in/alan-jhonnes-a9299420/)</br>Analista de Educação Corporativa - [Ieda de Paula](https://www.linkedin.com/in/iedadepaula/)
+
+## Semanas
+
+- semana-1: Configurando o ambiente de trabalho
+- semana-2: Aulas de dependências e introdução a tipagens
+- semana-3: ?
+- semana-4: ?
+- semana-5: ?
+- semana-6: ?
+- semana-7: ?
+- semana-8: ?

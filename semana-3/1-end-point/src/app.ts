@@ -1,19 +1,13 @@
 import express, { Request, Response, Router } from "express";
 import cors from "cors";
 
+import healthRouter from "./routers/health.touter";
 const app = express();
 
 app.use(cors());
 app.use(express.json());
+app.use(healthRouter);
 
-const router = Router();
-
-router.get("/", (req: Request, res: Response) => {
-  const helthCheck = { message: "Aplicação funcionando com sucesso!" };
-  res.send(helthCheck);
-});
-
-app.use(router);
 const port = 3000;
 
 app.listen(port, () => {

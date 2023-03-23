@@ -7,4 +7,9 @@ router.get("/", (req: Request, res: Response) => {
   res.send(helthCheck);
 });
 
+router.get("/check", (req: Request, res: Response) => {
+  const helthCheck = { message: "Aplicação está funcionando normalmente!" };
+  res.send(helthCheck);
+});
+
 export default router;

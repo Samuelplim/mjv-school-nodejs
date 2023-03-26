@@ -35,7 +35,45 @@ const students = [
 studentsRouter.get("/", (req: Request, res: Response) => {
   res.send(students);
 });
+studentsRouter.get("/:document", (req: Request, res: Response) => {
+  const student = students.find((std) => std.document === req.params.document);
 
-studentsRouter.post("/", (req: Request, res: Response) => {});
+  if (!student) {
+    res.status(400).send({ message: "Aluno não encontrado!" });
+  }
+  res.status(200).send(student);
+});
+studentsRouter.post("/", (req: Request, res: Response) => {
+  if (req.body.age < 18) {
+    return res.status(400).send({
+      message: "Estudante não foi adicionado, pois não tem idade mínima!",
+    });
+  }
+  students.push(req.body);
+  res.send({ message: "Estudante adicionado" }).status(201);
+});
+
+studentsRouter.delete("/remove/:document", (req: Request, res: Response) => {
+  const studentIndex = students.findIndex(
+    (student) => student.document === req.params.document
+  );
+  if (studentIndex === -1) {
+    res.status(400).send({ message: "Estudante não encontrado!" });
+  }
+  students.slice(studentIndex, 1);
+  res.status(200).send({ message: "Estudante removido com sucesso!" });
+});
+
+studentsRouter.put("/:document", (req: Request, res: Response) => {
+  const studentIndex = students.findIndex(
+    (student) => student.document === req.params.document
+  );
+  students[studentIndex] = req.body;
+  if (studentIndex === -1) {
+    res.status(400).send({ message: "Estudante não encontrado!" });
+  }
+
+  res.status(200).send({ message: "Estudante atualizado!" });
+});
 
 export default studentsRouter;

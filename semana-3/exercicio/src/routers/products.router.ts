@@ -49,14 +49,14 @@ productsRouter.get("/", (req: Request, res: Response) => {
 productsRouter.get("/:id", (req: Request, res: Response) => {
   const product = products.find((std) => std.id.toString() === req.params.id);
   if (!product) {
-    res.status(400).send({ message: "Aluno não encontrado!" });
+    res.status(400).send({ message: "Produto não encontrado!" });
   }
   res.status(200).send(product);
 });
 
 productsRouter.post("/", (req: Request, res: Response) => {
   products.push(req.body);
-  res.send({ message: "Estudante adicionado" }).status(201);
+  res.send({ message: "Produto adicionado" }).status(201);
 });
 
 productsRouter.delete("/remove/:id", (req: Request, res: Response) => {
@@ -64,10 +64,11 @@ productsRouter.delete("/remove/:id", (req: Request, res: Response) => {
     (product) => product.id.toString() === req.params.id
   );
   if (productIndex === -1) {
-    res.status(400).send({ message: "Estudante não encontrado!" });
+    res.status(400).send({ message: "Produto não encontrado!" });
   }
-  products.slice(productIndex, 1);
-  res.status(200).send({ message: "Estudante removido com sucesso!" });
+  console.log(products[productIndex]);
+  products.splice(productIndex, 1);
+  res.status(200).send({ message: "Produto removido com sucesso!" });
 });
 
 productsRouter.put("/:id", (req: Request, res: Response) => {
@@ -76,10 +77,10 @@ productsRouter.put("/:id", (req: Request, res: Response) => {
   );
   products[productIndex] = req.body;
   if (productIndex === -1) {
-    res.status(400).send({ message: "Estudante não encontrado!" });
+    res.status(400).send({ message: "Produto não encontrado!" });
   }
 
-  res.status(200).send({ message: "Estudante atualizado!" });
+  res.status(200).send({ message: "Produto atualizado!" });
 });
 
 export default productsRouter;

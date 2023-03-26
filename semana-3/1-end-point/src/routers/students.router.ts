@@ -60,7 +60,7 @@ studentsRouter.delete("/remove/:document", (req: Request, res: Response) => {
   if (studentIndex === -1) {
     res.status(400).send({ message: "Estudante não encontrado!" });
   }
-  students.slice(studentIndex, 1);
+  students.splice(studentIndex, 1);
   res.status(200).send({ message: "Estudante removido com sucesso!" });
 });
 

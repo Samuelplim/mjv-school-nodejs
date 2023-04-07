@@ -1,7 +1,9 @@
-import express, { Request, Response, Router } from "express";
+import express from "express";
 import cors from "cors";
 
 import routers from "./routers";
+import connection from "./config/database";
+
 const app = express();
 
 app.use(cors());
@@ -10,6 +12,10 @@ app.use(routers);
 
 const port = 3000;
 
-app.listen(port, () => {
-  console.log("Aplicação online na porta: ", port);
-});
+connection
+  .then(() => {
+    app.listen(port, () => {
+      console.log("Aplicação online na porta: ", port);
+    });
+  })
+  .catch((err) => console.log(err));

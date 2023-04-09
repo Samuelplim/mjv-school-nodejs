@@ -19,6 +19,10 @@ class whatsAppServices {
     this.page.goto(whatsAppMetaData.whatsAppURL);
   }
 
+  private sleep(ms: number) {
+    return new Promise((resolve) => setTimeout(resolve, ms));
+  }
+
   public async sendMessage(message: string, recipient: string) {
     const msgUrl =
       whatsAppMetaData.whatsAppURL +
@@ -26,10 +30,12 @@ class whatsAppServices {
       recipient +
       "&text=" +
       message;
-    this.page.goto(msgUrl);
-    this.page.waitForSelector(whatsAppMetaData.sendMessageButton);
-
-    console.log(msgUrl);
+    await this.page.goto(msgUrl);
+    await this.page.waitForSelector(whatsAppMetaData.sendMessageButton, {
+      visible: true,
+    });
+    await this.sleep(1000);
+    await this.page.click(whatsAppMetaData.sendMessageButton);
   }
 }
 

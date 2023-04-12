@@ -1,3 +1,4 @@
+import { StudentInterface } from "../interface";
 import { Student } from "../models/student.model";
 
 class StudentRepository {
@@ -9,11 +10,11 @@ class StudentRepository {
     return Student.findOne({ document: document });
   }
 
-  create(student: typeof Student) {
+  create(student: StudentInterface) {
     return Student.create(student);
   }
 
-  update(document: string, student: Partial<typeof Student>) {
+  update(document: string, student: Partial<StudentInterface>) {
     return Student.updateOne({ document: document }, { $set: student });
   }
 

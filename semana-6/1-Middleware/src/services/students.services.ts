@@ -1,5 +1,6 @@
+import bcrypt from "bcrypt";
 import studentRepository from "../repositories/student.repository";
-import { Student } from "../models/student.model";
+import { StudentInterface } from "../interface";
 
 class StudentsService {
   getAll() {
@@ -10,7 +11,10 @@ class StudentsService {
     return studentRepository.getByDocument(document);
   }
 
-  create(student: typeof Student) {
+  async create(student: StudentInterface) {
+    if (student.password) {
+      student.password = await bcrypt.hash(student.password.toString(), 10);
+    }
     return studentRepository.create(student);
   }
 
@@ -18,7 +22,7 @@ class StudentsService {
     return studentRepository.remove(document);
   }
 
-  update(document: string, student: typeof Student) {
+  update(document: string, student: Partial<StudentInterface>) {
     return studentRepository.update(document, student);
   }
 }

@@ -1,6 +1,7 @@
 import mongoose, { Schema } from "mongoose";
+import { StudentInterface } from "../interface";
 
-export const studentSchema = new Schema({
+export const studentSchema = new Schema<StudentInterface>({
   name: {
     type: String,
   },
@@ -25,4 +26,7 @@ export const studentSchema = new Schema({
   },
 });
 
-export const Student = mongoose.model("Student", studentSchema);
+export const Student = mongoose.model<StudentInterface>(
+  "Student",
+  studentSchema
+);

@@ -16,8 +16,8 @@ Desenvolvedor Full Stack - [Nathan Carlos](https://www.linkedin.com/in/nathan-ca
 - semana-2: Aulas de dependências e introdução a tipagens
 - semana-3: O primeiro end poit, protocolos e rotas
 - semana-4: Criação de um services e models em classe no Typescript, e tratamentos de exceções
-- semana-5: conexão com Banco de dados MongoDBs
-- semana-6: ?
+- semana-5: Conexão com Banco de dados MongoDBs
+- semana-6: Criptografia e autenticação JWT
 - semana-7: ?
 - semana-8: ?
 - projetofinal

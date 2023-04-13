@@ -7,7 +7,7 @@ class StudentRepository {
   }
 
   getByDocument(document: string) {
-    return Student.findOne({ document: document });
+    return Student.findOne({ document });
   }
 
   create(student: StudentInterface) {

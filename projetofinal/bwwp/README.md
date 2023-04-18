@@ -6,8 +6,8 @@ Este projeto ajuda provedores de internet pequenos que utilizam a plataforma Bee
 
 #### Documentação oficial da BessWeb
 
-https://d2eolp71ca7cv2.cloudfront.net/
-URL_API: https://api.beesweb.com.br
+- DOCUMENTAÇÃO: https://d2eolp71ca7cv2.cloudfront.net/
+- URL_API: https://api.beesweb.com.br
 
 ## Bibliotecas do projeto
 

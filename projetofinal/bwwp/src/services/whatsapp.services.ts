@@ -1,5 +1,6 @@
 import puppeteer, { Browser, Page } from "puppeteer";
 import { whatsAppMetaData } from "../models/whatsApp.model";
+import customerRepostory from "../repositories/customer.repostory";
 
 class whatsAppServices {
   public browser = new Browser();
@@ -23,7 +24,8 @@ class whatsAppServices {
     return new Promise((resolve) => setTimeout(resolve, ms));
   }
 
-  public async sendMessage(message: string, recipient: string) {
+  public async sendMessage(customerID: number) {
+    const customer = customerRepostory.getByID(customerID);
     const msgUrl =
       whatsAppMetaData.whatsAppURL +
       "send?phone=" +

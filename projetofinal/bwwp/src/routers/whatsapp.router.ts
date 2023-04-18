@@ -6,7 +6,7 @@ const whatsServices = whatsAppServices;
 whatsAppServices.online();
 
 whatsappRouter.post("/", async (req: Request, res: Response) => {
-  await whatsServices.sendMessage(req.body.message, req.body.recipient);
+  await whatsServices.sendMessage(req.body.id);
   res.status(200).send({ message: "mensagem enviada!" });
 });
 

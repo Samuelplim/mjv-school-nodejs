@@ -4,6 +4,7 @@ import { CustomerInterface, CustomerReportInterface } from "../interfaces";
 type propsCustomers = {
   id: number;
   name: string;
+  status: number;
   contract: {
     authentications: [
       { id: number; plan: { id: number; name: string; value: string } }
@@ -34,6 +35,7 @@ class CustomerService {
           const customer: CustomerInterface = {
             id: response.data.id,
             name: response.data.name,
+            status: response.data.status,
             plan: response.data.contract.authentications[0].plan,
             phones: response.data.phones,
           };

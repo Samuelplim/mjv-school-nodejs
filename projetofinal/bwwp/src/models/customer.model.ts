@@ -1,27 +1,18 @@
 import mongoose, { Schema } from "mongoose";
+import { CustomerInterface } from "../interfaces";
 
-export const customerSchema = new Schema({
+export const customerSchema = new Schema<CustomerInterface>({
+  id: {
+    type: Number,
+  },
   name: {
     type: String,
   },
-  email: {
-    type: String,
-  },
-  birth: {
-    type: String,
-  },
-  kind_person: {
-    type: String,
-  },
-  rg_state_registration: {
-    type: String,
-  },
-  cpf_cnpj: {
-    type: String,
-  },
-  status: {
-    type: Boolean,
-  },
+  plan: [{ id: Number, name: String, value: String }],
+  phones: [{ id: Number, number: Number }],
 });
 
-export const Customer = mongoose.model("Customer", customerSchema);
+export const Customer = mongoose.model<CustomerInterface>(
+  "Customer",
+  customerSchema
+);

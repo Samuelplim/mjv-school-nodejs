@@ -10,6 +10,7 @@ class SessionService {
     if (session.password) {
       session.password = await bcrypt.hash(session.password, 10);
     }
+    sessionRepository.create(session);
   }
 }
 dotenv.config();

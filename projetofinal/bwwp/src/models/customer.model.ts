@@ -8,7 +8,7 @@ export const customerSchema = new Schema<CustomerInterface>({
   name: {
     type: String,
   },
-  plan: [{ id: Number, name: String, value: String }],
+  plan: { id: Number, name: String, value: String },
   phones: [{ id: Number, number: Number }],
 });
 

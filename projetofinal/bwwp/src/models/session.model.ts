@@ -13,7 +13,7 @@ export const sessionSchema = new Schema<SessionInterface>({
   },
 });
 
-export const session = mongoose.model<SessionInterface>(
+export const Session = mongoose.model<SessionInterface>(
   "session",
   sessionSchema
 );

@@ -25,19 +25,23 @@ class whatsAppServices {
   }
 
   public async sendMessage(customerID: number) {
-    const customer = customerRepostory.getByID(customerID);
-    const msgUrl =
+    const customer = await customerRepostory.getByID(customerID);
+    const customerPhone = customer?.phones[0].number;
+    const customerPlanValue = customer?.plan.value;
+    const text = `Olá ${customer?.name}, seu plano no valor de R$ ${customerPlanValue} vence hoje!`;
+    const msgUrl = encodeURI(
       whatsAppMetaData.whatsAppURL +
-      "send?phone=" +
-      recipient +
-      "&text=" +
-      message;
+        "send?phone=" +
+        customerPhone +
+        "&text=" +
+        text
+    );
     await this.page.goto(msgUrl);
     await this.page.waitForSelector(whatsAppMetaData.sendMessageButton, {
       visible: true,
     });
     await this.sleep(1000);
-    await this.page.click(whatsAppMetaData.sendMessageButton);
+    //await this.page.click(whatsAppMetaData.sendMessageButton);
   }
 }
 

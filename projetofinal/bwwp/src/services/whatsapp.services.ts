@@ -41,7 +41,7 @@ class whatsAppServices {
       visible: true,
     });
     await this.sleep(1000);
-    //await this.page.click(whatsAppMetaData.sendMessageButton);
+    await this.page.click(whatsAppMetaData.sendMessageButton);
   }
 }
 

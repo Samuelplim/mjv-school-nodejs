@@ -3,4 +3,6 @@ import {
   CustomerReportInterface,
 } from "./customer.interface";
 
-export { CustomerInterface, CustomerReportInterface };
+import { SessionInterface } from "./session.interface";
+
+export { CustomerInterface, CustomerReportInterface, SessionInterface };

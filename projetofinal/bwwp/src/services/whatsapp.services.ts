@@ -6,8 +6,6 @@ class whatsAppServices {
   public browser = new Browser();
   public page = new Page();
 
-  constructor() {}
-
   public async online() {
     this.browser = await puppeteer.launch({
       headless: false,

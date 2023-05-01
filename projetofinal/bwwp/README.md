@@ -2,9 +2,9 @@
 
 ## Informações
 
-Este projeto ajuda provedores de internet pequenos que utilizam a plataforma Beesweb a enviarem mensagens de cobrança automatizadas para seus clientes através do WhatsApp. Essa solução irá agilizar o processo de cobrança, tornando-o mais eficiente e econômico para o provedor de internet.
-![Liberapay patrons](https://img.shields.io/liberapay/patrons/Changaco?label=Contribua)
-[Contribua com o projeto]()
+Este projeto ajuda provedores de internet pequenos que utilizam a plataforma Beesweb a enviarem mensagens de cobrança automatizadas para seus clientes através do WhatsApp. Essa solução irá agilizar o processo de cobrança, tornando-o mais eficiente e econômico para o provedor de internet.</br>
+![Liberapay patrons](https://img.shields.io/liberapay/patrons/Changaco?label=Contribua)</br>
+[Contribua com o projeto](www.catarse.me/bwwp_4fa2)
 
 #### Documentação oficial da BessWeb
 
